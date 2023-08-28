@@ -1,0 +1,27 @@
+name: (Manual) Deploy
+on:
+  workflow_dispatch:
+
+permissions:
+    id-token: write
+    contents: read
+
+jobs:
+  deploy:
+      name: Deploy The Thing
+      runs-on: ubuntu-latest
+      continue-on-error: false
+      defaults:
+        run:
+          shell: bash
+          working-directory: ./
+      steps:
+        - id: step 1
+          name: step 1
+          run: echo "pr workflow is starting..."
+        - id: step 2
+          name: step 2
+          run: echo "pr workflow is running..."
+        - id: step 3
+          name: step 3
+          run: echo "pr workflow is finished..."
